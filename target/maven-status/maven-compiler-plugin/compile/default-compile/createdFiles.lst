@@ -1,0 +1,7 @@
+com/cardgame/doublesir/config/WebAppInitializer.class
+com/cardgame/doublesir/config/WebConfig.class
+com/cardgame/doublesir/config/WebSocketConfig.class
+com/cardgame/doublesir/dto/OutputMessage.class
+com/cardgame/doublesir/controller/ChatController.class
+com/cardgame/doublesir/dto/Message.class
+com/cardgame/doublesir/config/AppConfig.class
