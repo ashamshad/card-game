@@ -1,9 +1,9 @@
 (function(angular) {
-  angular.module("chatApp", [
-    "chatApp.controllers",
-    "chatApp.services"
+  angular.module("gameApp", [
+    "gameApp.controllers",
+    "gameApp.services"
   ]);
-  
-  angular.module("chatApp.controllers", []);
-  angular.module("chatApp.services", []);
+
+  angular.module("gameApp.controllers", []);
+  angular.module("gameApp.services", []);
 })(angular);

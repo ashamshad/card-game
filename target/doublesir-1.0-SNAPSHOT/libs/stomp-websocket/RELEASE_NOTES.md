@@ -17,7 +17,7 @@
   * `messageID` & `subscription` are MANDATORY.
   * `headers` is OPTIONAL
 
-* the `client` object has a `heartbeat` field which can be used to configure heart-beating by changing its `incoming` and `outgoing` integer fields (default value for both is 10000ms):
+* the `client` object has a `heartbeat` field which can be used to configure heart-beating by changing its `incoming` and `outgoing` integer fields (default mark for both is 10000ms):
 
     client.heartbeat.outgoing = 20000 // client will send heartbeats every 20000ms
     client.heartbeat.incoming = 0 // client does not want to receive heartbeats

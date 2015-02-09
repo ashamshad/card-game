@@ -2,6 +2,9 @@ package com.cardgame.doublesir.service;
 
 
 import com.cardgame.doublesir.dto.Card;
+import com.cardgame.doublesir.dto.Hand;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.api.Condition;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,5 +31,23 @@ public class CardServiceImplTest {
 
         //THEN
         Assert.assertEquals(shuffleCards.size(), 52);
+    }
+
+    @Test
+    public void test_getHandsFromCards__nominal(){
+        //GIVEN
+        CardService cardService = new CardServiceImpl();
+        List<Card> shuffleCards = cardService.shuffleCards();
+
+        //WHEN
+        List<Hand> hands = cardService.getHandsFromCards(shuffleCards);
+
+        //THEN
+        Condition<Hand> condition = new HandCondition();
+
+        Assertions.assertThat(shuffleCards).isNotNull();
+        Assertions.assertThat(hands)
+                .isNotNull()
+                .areExactly(4, condition);
     }
 }

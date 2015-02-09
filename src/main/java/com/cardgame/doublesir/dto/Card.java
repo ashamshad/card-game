@@ -1,5 +1,9 @@
 package com.cardgame.doublesir.dto;
 
+import com.cardgame.doublesir.serializer.CardSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize(using = CardSerializer.class)
 public enum Card {
     TWO_SPADE(2, Suit.SPADE),
     THREE_SPADE(3, Suit.SPADE),
@@ -57,11 +61,18 @@ public enum Card {
     KING_DIAMOND(13, Suit.DIAMOND),
     ACE_DIAMOND(14, Suit.DIAMOND);
 
-    int value;
+    Integer mark;
     Suit suit;
 
-    Card(int value, Suit suit) {
-        this.value = value;
+    Card(int mark, Suit suit) {
+        this.mark = mark;
         this.suit = suit;
+    }
+
+    public Integer getMark() {
+        return mark;
+    }
+    public Suit getSuit() {
+        return suit;
     }
 }

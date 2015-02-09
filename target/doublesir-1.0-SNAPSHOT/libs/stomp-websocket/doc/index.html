@@ -304,7 +304,7 @@ This method expects an object that conforms to the WebSocket definition.
 
 <p>If the STOMP broker accepts STOMP 1.1 frames, <a href=>heart-beating</a> is enabled by default.
 
-<p>The <code>client</code> object has a <code>heartbeat</code> field which can be used to configure heart-beating by changing its <code>incoming</code> and <code>outgoing</code> integer fields (default value for both is <code>10000</code>ms):
+<p>The <code>client</code> object has a <code>heartbeat</code> field which can be used to configure heart-beating by changing its <code>incoming</code> and <code>outgoing</code> integer fields (default mark for both is <code>10000</code>ms):
 
 <pre><code>
     client.<mark>heartbeat.outgoing</mark> = 20000; // client will send heartbeats every 20000ms
@@ -419,12 +419,12 @@ This method expects an object that conforms to the WebSocket definition.
   object to a String and vice versa.</p>
 
 <pre><code>
-  var quote = {symbol: 'APPL', value: 195.46};
+  var quote = {symbol: 'APPL', mark: 195.46};
   client.send("/topic/stocks", {}, <mark>JSON.stringify(quote)</mark>);
 
   client.subcribe("/topic/stocks", function(message) {
     var quote = <mark>JSON.parse(message.body)</mark>;
-    alert(quote.symbol + " is at " + quote.value);
+    alert(quote.symbol + " is at " + quote.mark);
   };
 </code></pre>
 

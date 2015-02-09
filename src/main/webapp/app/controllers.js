@@ -1,16 +1,19 @@
 (function(angular) {
-  angular.module("chatApp.controllers").controller("ChatCtrl", function($scope, ChatService) {
-    $scope.messages = [];
-    $scope.message = "";
+  angular.module("gameApp.controllers").controller("GameCtrl", function($scope, $log, GameService) {
+    $scope.cards = [];
     $scope.max = 140;
-    
-    $scope.addMessage = function() {
-      ChatService.send($scope.message);
-      $scope.message = "";
+
+    $scope.shuffleCards = function() {
+      GameService.getShuffledCards();
     };
-    
-    ChatService.receive().then(null, null, function(message) {
-      $scope.messages.push(message);
+
+    GameService.receive().then(null, null, function(shuffledCards) {
+      $scope.cards = shuffledCards;
     });
+
+    $scope.testImage = function(cardIndex) {
+      alert($scope.cards[cardIndex].id);
+    };
+
   });
 })(angular);

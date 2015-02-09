@@ -1,11 +1,18 @@
 package com.cardgame.doublesir.dto;
 
-/**
- * Created by adilshamshad on 03/02/2015.
- */
 public enum Suit {
-    CLUB,
-    SPADE,
-    HEART,
-    DIAMOND,
+    SPADE(1),
+    HEART(2),
+    CLUB(3),
+    DIAMOND(4),;
+
+    private Integer order;
+
+    Suit(Integer order) {
+        this.order = order;
+    }
+
+    public Integer getOrder() {
+        return order;
+    }
 }

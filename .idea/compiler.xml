@@ -25,5 +25,8 @@
         <module name="doublesir" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="doublesir" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

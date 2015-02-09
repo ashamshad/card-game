@@ -1,18 +1,17 @@
 package com.cardgame.doublesir.dto;
 
-import java.util.List;
+import com.cardgame.doublesir.service.CardComparator;
 
-/**
- * Created by adilshamshad on 03/02/2015.
- */
+import java.util.TreeSet;
+
 public class Hand {
-    List<Card> cards;
+    TreeSet<Card> cards;
 
-    public List<Card> getCards() {
-        return cards;
+    public Hand(){
+        this.cards = new TreeSet<>(new CardComparator());
     }
 
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
+    public TreeSet<Card> getCards() {
+        return cards;
     }
 }

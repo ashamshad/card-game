@@ -11,4 +11,7 @@ import java.util.List;
  */
 public interface CardService {
     public List<Card> shuffleCards();
+
+    public List<Hand> getHandsFromCards(List<Card> cards);
+
 }
