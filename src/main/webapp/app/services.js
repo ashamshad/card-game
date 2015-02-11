@@ -7,13 +7,26 @@
     };
 
     service.RECONNECT_TIMEOUT = 30000;
+    service.IMAGE_PATH = "../images/cards/";
+
     service.SOCKET_URL = "/game";
+
     service.SHUFFLE_TOPIC = "/topic/shuffle";
     service.SHUFFLE_BROKER = "/app/shuffle";
-    service.IMAGE_PATH = "../images/cards/";
+
+    service.GAME_TOPIC = "/topic/game";
+    service.GAME_BROKER = "/app/game";
 
     service.receive = function() {
       return listener.promise;
+    };
+
+    service.getGames = function() {
+      socket.stomp.send(service.GAME_BROKER, {
+        priority: 9
+      }, JSON.stringify({
+      }));
+
     };
 
     service.getShuffledCards = function() {
@@ -30,8 +43,8 @@
       }, this.RECONNECT_TIMEOUT);
     };
 
-    //callback handler to receive the data from server 
-    var getHands = function(data) {
+    //callback handler to receive hands from server
+    var handleReceiveHands = function(data) {
       var hands = JSON.parse(data);
 
       var hand = hands[0];
@@ -46,9 +59,22 @@
       return cards;
     };
 
+    //callback handler to receive games from server
+    var handleReceiveGames = function(data) {
+      var games = JSON.parse(data);
+
+      console.log(games);
+
+      return games;
+    };
+
     var startListener = function() {
       socket.stomp.subscribe(service.SHUFFLE_TOPIC, function(data) {
-        listener.notify(getHands(data.body));
+        listener.notify(handleReceiveHands(data.body));
+      });
+
+      socket.stomp.subscribe(service.GAME_TOPIC, function(data) {
+        listener.notify(handleReceiveGames(data.body));
       });
     };
 

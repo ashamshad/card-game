@@ -1,3 +1,4 @@
+com/cardgame/doublesir/service/GameServiceImpl.class
 com/cardgame/doublesir/config/WebAppInitializer.class
 com/cardgame/doublesir/config/WebConfig.class
 com/cardgame/doublesir/controller/CardController.class
@@ -7,9 +8,13 @@ com/cardgame/doublesir/config/AppConfig.class
 com/cardgame/doublesir/dto/Hand.class
 com/cardgame/doublesir/dto/Suit.class
 com/cardgame/doublesir/controller/WebSocketController.class
+com/cardgame/doublesir/dto/Player.class
+com/cardgame/doublesir/dto/Game.class
 com/cardgame/doublesir/serializer/CardSerializer.class
 com/cardgame/doublesir/config/WebSocketConfig.class
+com/cardgame/doublesir/controller/GameController.class
 com/cardgame/doublesir/dto/Card.class
 com/cardgame/doublesir/service/HandCondition.class
+com/cardgame/doublesir/service/GameService.class
 com/cardgame/doublesir/controller/HomeController.class
 com/cardgame/doublesir/service/CardService.class

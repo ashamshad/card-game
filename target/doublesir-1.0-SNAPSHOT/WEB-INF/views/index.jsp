@@ -16,7 +16,7 @@
 
 <script>
   $( "#newGameDiv" ).click(function() {
-    window.location.replace("cards");
+    window.location.replace("games");
   });
 </script>
 

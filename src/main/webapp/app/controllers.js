@@ -3,6 +3,10 @@
     $scope.cards = [];
     $scope.max = 140;
 
+    $scope.getGames = function() {
+      GameService.getGames();
+    };
+
     $scope.shuffleCards = function() {
       GameService.getShuffledCards();
     };

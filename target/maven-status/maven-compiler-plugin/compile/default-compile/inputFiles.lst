@@ -1,9 +1,13 @@
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Player.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Suit.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/WebConfig.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/serializer/CardSerializer.java
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/GameServiceImpl.java
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/GameController.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/WebAppInitializer.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/CardService.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/WebSocketConfig.java
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/GameService.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/WebSocketController.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/CardController.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/CardServiceImpl.java
@@ -12,4 +16,5 @@
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/HandCondition.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/AppConfig.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/HomeController.java
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Game.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/CardComparator.java
