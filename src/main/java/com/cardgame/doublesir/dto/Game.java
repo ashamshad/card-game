@@ -1,9 +1,12 @@
 package com.cardgame.doublesir.dto;
 
+import com.cardgame.doublesir.serializer.GameSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
+@JsonSerialize(using = GameSerializer.class)
 public class Game {
     private String name;
     Set<Player> players;

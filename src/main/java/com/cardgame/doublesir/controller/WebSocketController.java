@@ -11,6 +11,7 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -37,9 +38,17 @@ public class WebSocketController {
 
   @MessageMapping("/game")
   @SendTo("/topic/game")
-  public Map<String, Game> getGames() {
+  public Collection<Game> getGames() {
     Map<String, Game> games = this.gameService.getGames();
 
-    return games;
+    return games.values();
+  }
+
+  @MessageMapping("/createGame")
+  @SendTo("/topic/createGame")
+  public String createGame(String gameName) {
+    this.gameService.createGame(gameName);
+
+    return "OK";
   }
 }

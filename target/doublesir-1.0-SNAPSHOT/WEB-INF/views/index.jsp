@@ -15,8 +15,12 @@
 </div>
 
 <script>
-  $( "#newGameDiv" ).click(function() {
+  $( "#joinGameDiv" ).click(function() {
     window.location.replace("games");
+  });
+
+  $( "#newGameDiv" ).click(function() {
+    window.location.replace("createGame");
   });
 </script>
 

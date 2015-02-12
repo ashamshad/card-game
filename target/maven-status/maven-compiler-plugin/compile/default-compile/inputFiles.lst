@@ -1,3 +1,4 @@
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/CreateGameController.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Player.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Suit.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/WebConfig.java
@@ -17,4 +18,5 @@
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/config/AppConfig.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/controller/HomeController.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/dto/Game.java
+/Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/serializer/GameSerializer.java
 /Users/adilshamshad/Development/Projects/card-game/src/main/java/com/cardgame/doublesir/service/CardComparator.java
